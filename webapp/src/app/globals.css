@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  @apply min-h-screen bg-slate-950 text-slate-50 antialiased;
+  background-image: radial-gradient(
+      circle at 20% 20%,
+      rgba(79, 70, 229, 0.14),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(14, 165, 233, 0.2),
+      transparent 48%
+    );
+}
+
+input,
+textarea,
+select {
+  @apply bg-slate-900/70 border border-slate-700/80 rounded-md px-3 py-2 text-sm text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500;
+}
+
+button {
+  @apply inline-flex items-center justify-center rounded-md bg-sky-500 px-4 py-2 text-sm font-medium text-white shadow transition hover:bg-sky-400 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.card {
+  @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 shadow-xl shadow-slate-900/40;
+}
+
+.card-title {
+  @apply text-xs font-semibold uppercase tracking-[0.2em] text-slate-300;
+}
+
+.pill {
+  @apply inline-flex items-center rounded-full border border-slate-700 bg-slate-900/70 px-3 py-1 text-xs font-medium text-slate-300;
+}
